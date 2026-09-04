@@ -15,12 +15,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "IMAGE-PRESS // 100% Client-Side Image Optimizer",
   description: "Compress images offline with zero cloud uploads. High-throughput Swiss Neo-Brutalist image optimization engine.",
-  manifest: "/manifest.json",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "black-translucent",
-    title: "IMAGE-PRESS",
-  },
   icons: {
     icon: "/icon.svg",
   },

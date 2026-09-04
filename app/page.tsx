@@ -175,16 +175,6 @@ export default function ImagePressApp() {
     jobsRef.current = jobs;
   }, [jobs]);
 
-  useEffect(() => {
-    if (typeof window === "undefined" || !("serviceWorker" in navigator)) {
-      return;
-    }
-
-    navigator.serviceWorker.register("/sw.js").catch((err) => {
-      console.warn("ServiceWorker registration failed:", err);
-    });
-  }, []);
-
   const updateQueuedJobs = (updater: (job: ImageJob) => ImageJob) => {
     setJobs((prev) => prev.map((job) => (job.status === "QUEUED" ? updater(job) : job)));
   };
